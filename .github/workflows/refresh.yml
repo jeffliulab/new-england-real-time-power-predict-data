@@ -1,11 +1,11 @@
 name: Refresh rolling backtest
 
 on:
+  workflow_dispatch:
   schedule:
     # 04:00 UTC every day -- ISO-NE has yesterday's 5-min zonal data
     # fully published by then (typical lag ~1-2 hours).
     - cron: '0 4 * * *'
-  workflow_dispatch: {}
 
 jobs:
   build:
@@ -61,17 +61,6 @@ jobs:
           ls -la data/
           echo "--- last_built.json ---"
           cat data/last_built.json
-          echo "--- backtest summary ---"
-          python -c "
-import json
-b = json.load(open('data/backtest_rolling_7d.json'))
-s = b['summary']
-print(f\"  built_at: {b.get('built_at')}\")
-print(f\"  forecasts: {b.get('n_forecasts')}\")
-print(f\"  baseline overall MAPE: {s['baseline']['overall']:.2f}%\")
-print(f\"  chronos overall MAPE:  {s['chronos']['overall']:.2f}%\")
-print(f\"  ensemble overall MAPE: {s['ensemble']['overall']:.2f}%\")
-"
 
       - name: Commit + push if data changed
         run: |
