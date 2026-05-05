@@ -1,0 +1,8 @@
+code/
+__pycache__/
+*.pyc
+.venv/
+*.npz
+*.pt
+/tmp/
+.DS_Store
