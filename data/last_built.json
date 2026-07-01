@@ -1,15 +1,15 @@
 {
-  "built_at": "2026-06-29T08:58:24.508457+00:00",
+  "built_at": "2026-07-01T08:08:33.624533+00:00",
   "code_sha": "d7956eb66f3e1f8fa66e654eac4d9c227109fe97\nd7956eb66f3e1f8fa66e654eac4d9c227109fe97",
   "data_period": {
-    "first_forecast_start": "2026-06-22T00:00:00",
-    "last_forecast_start": "2026-06-28T00:00:00",
-    "last_truth_hour": "2026-06-28T23:00:00"
+    "first_forecast_start": "2026-06-24T00:00:00",
+    "last_forecast_start": "2026-06-30T00:00:00",
+    "last_truth_hour": "2026-06-30T23:00:00"
   },
   "n_forecasts": 7,
   "summary_mape_pct": {
-    "baseline": 16.501381933689117,
-    "chronos": 7.199354446360043,
-    "ensemble": 8.866803279944829
+    "baseline": 19.004939905234746,
+    "chronos": 6.109912529587746,
+    "ensemble": 8.181278069104467
   }
 }
